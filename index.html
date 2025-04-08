@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R2LM 2025 - RANLP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-y: auto;
+            width: 100%;
+        }
+
+        .section-container {
+            scroll-margin-top: 4rem;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .section-container.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out;
+            }
+
+            .mobile-menu.active {
+                max-height: 300px;
+            }
+        }
+
+        #hero {
+            transition: height 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), margin-top 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        #hero.collapsed {
+            height: 200px;
+            opacity: 0.8;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Header with Navigation -->
+    <header class="relative">
+        <!-- Navigation Bar - Fixed -->
+        <nav class="bg-blue-900 text-white fixed top-0 left-0 right-0 z-50 shadow-lg">
+            <div class="container mx-auto">
+                <!-- Desktop and Mobile Navigation -->
+                <div class="relative">
+                    <!-- Top Bar -->
+                    <div class="flex items-center justify-between h-16 px-4">
+                        <!-- Logo -->
+                        <div class="flex-shrink-0">
+                            <a href="#hero" class="hover:opacity-80 transition-opacity">
+                                <h1 class="text-2xl font-bold text-white">R2LM 2025</h1>
+                            </a>
+                        </div>
+                        <!-- Mobile Menu Button -->
+                        <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </button>
+                        <!-- Desktop Navigation Links -->
+                        <div class="hidden md:flex space-x-8">
+                            <a href="#overview"
+                                class="nav-link px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent">Overview</a>
+                            <a href="#dates"
+                                class="nav-link px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent">Dates</a>
+                            <a href="#schedule"
+                                class="nav-link px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent">Schedule</a>
+                            <a href="#committees"
+                                class="nav-link px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent">Committees</a>
+                            <a href="#programme"
+                                class="nav-link px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent">Programme</a>
+                            <!-- Uncomment when the date comes-->
+                            <!-- <a href="#submissions"
+                                class="nav-link px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent">Call for Papers</a> -->
+                        </div>
+                    </div>
+                    <!-- Mobile Navigation Links -->
+                    <div class="mobile-menu md:hidden bg-blue-900" id="mobile-menu">
+                        <div class="flex flex-col space-y-2 px-4 pb-4">
+                            <a href="#overview"
+                                class="nav-link py-2 text-blue-200 hover:text-white transition-colors duration-200">Overview</a>
+                            <a href="#dates"
+                                class="nav-link py-2 text-blue-200 hover:text-white transition-colors duration-200">Dates</a>
+                            <a href="#schedule"
+                                class="nav-link py-2 text-blue-200 hover:text-white transition-colors duration-200">Schedule</a>
+                            <a href="#committees"
+                                class="nav-link py-2 text-blue-200 hover:text-white transition-colors duration-200">Committees</a>
+                            <a href="#programme"
+                                class="nav-link py-2 text-blue-200 hover:text-white transition-colors duration-200">Programme</a>
+                            <!-- Uncomment when the date comes-->    
+                            <!-- <a href="#submissions"
+                                class="nav-link py-2 text-blue-200 hover:text-white transition-colors duration-200">Call for Papers</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <div id="hero" class="relative h-[450px] w-full overflow-hidden bg-black"
+            style="background-image: url('https://res.cloudinary.com/dgr6ll2mx/image/upload/v1744005622/palicante_nd9sm9.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+            <div class="h-16"></div>
+            <div class="absolute inset-0 top-16 bg-black bg-opacity-40"></div>
+            <div class="absolute inset-0 top-16 flex items-center justify-center text-white">
+                <div class="text-center px-4">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-2 leading-tight">
+                        From Rules to Language Models
+                    </h2>
+                    <p class="text-2xl md:text-3xl font-medium">
+                        Comparative Performance Evaluation
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content Sections -->
+    <main>
+        <!-- Overview Section -->
+        <section id="overview" class="section-container py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-blue-900 mb-8">Overview</h2>
+                <div class="prose max-w-none">
+                    <p class="text-gray-700 text-lg mb-6">
+                        Join us at the "From Rules to Language Models: Comparative Performance Evaluation" workshop,
+                        held alongside RANLP 2025 in Bulgaria. This event explores the evolving landscape of Natural
+                        Language Processing (NLP), comparing rule-based, knowledge-based, and modern deep learning
+                        approaches, including large language models (LLMs).
+                    </p>
+                    <p class="text-gray-700 text-lg">
+                        Highlights include:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 mt-4 text-lg space-y-2">
+                        <li>Insights from invited speaker Tharindu Ranasinghe on ML for NLP and social good</li>
+                        <li>Comparative analyses of methodologies across tasks like text classification and anaphora
+                            resolution</li>
+                        <li>Discussions on emerging trends, such as neurosymbolic AI and retrieval-augmented generation
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dates Section -->
+        <section id="dates" class="section-container py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-blue-900 mb-8">Important Dates</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-semibold mb-4 text-blue-800">Important Dates</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 font-medium w-60">Workshop paper submission deadline:</span>
+                                <span>6 July 2025</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 font-medium w-60">Workshop paper acceptance
+                                    notification:</span>
+                                <span>31 July 2025</span>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-semibold mb-4 text-blue-800">Submission Deadlines</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 font-medium w-60">Workshop paper camera-ready
+                                    versions:</span>
+                                <span>30 August 2025</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 font-medium w-60">Workshop camera-ready proceedings
+                                    ready:</span>
+                                <span>8 September 2025</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 font-medium w-60">Workshops:</span>
+                                <span>11-13 September 2025</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule" class="section-container py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-blue-900 mb-8">Schedule</h2>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <p class="text-gray-700">The detailed schedule will be announced closer to the workshop date.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Committees Section -->
+        <section id="committees" class="section-container py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-blue-900 mb-8">Organizing Committee</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="aspect-w-1 aspect-h-1 mb-4 overflow-hidden rounded-lg">
+                            <img src="https://res.cloudinary.com/dgr6ll2mx/image/upload/v1744006325/alicia_mgqr4e.jpg"
+                                alt="Committee Member 1" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-blue-800"> Alicia Picazo-Izquierdo</h3>
+                        <p class="text-gray-600">University of Alicante, Spain</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="aspect-w-1 aspect-h-1 mb-4 overflow-hidden rounded-lg">
+                            <img src="https://res.cloudinary.com/dgr6ll2mx/image/upload/v1744006325/ernesto_ls7khv.jpg"
+                                alt="Committee Member 2" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-blue-800">Ernesto Luis Estevanell-Valladares</h3>
+                        <p class="text-gray-600">University of Alicante, Spain</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="aspect-w-1 aspect-h-1 mb-4 overflow-hidden rounded-lg">
+                            <img src="https://res.cloudinary.com/dgr6ll2mx/image/upload/v1744006325/ruslan_fjvm8i.webp"
+                                alt="Committee Member 3" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-blue-800">Ruslan Mitkov</h3>
+                        <p class="text-gray-600">Lancaster University, UK</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="aspect-w-1 aspect-h-1 mb-4 overflow-hidden rounded-lg">
+                            <img src="https://res.cloudinary.com/dgr6ll2mx/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1744106930/rafa_lvfy7o.jpg"
+                                alt="Committee Member 4" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-blue-800">Rafael Muñoz Guillena</h3>
+                        <p class="text-gray-600">University of Alicante, Spain</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="aspect-w-1 aspect-h-1 mb-4 overflow-hidden rounded-lg">
+                            <img src="https://res.cloudinary.com/dgr6ll2mx/image/upload/v1744006325/raul_hmqfte.jpg"
+                                alt="Committee Member 5" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-blue-800">Raúl García Cerdá</h3>
+                        <p class="text-gray-600">University of Alicante, Spain</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programme Section -->
+        <section id="programme" class="section-container py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-blue-900 mb-8">Programme Committee</h2>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <p class="text-gray-700">The Programme Committee is to be announced. Stay tuned for updates!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call for Papers Section: Uncoment when the dates comes-->
+        <!-- <section id="submissions" class="section-container py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-blue-900 mb-8">Call for Papers</h2>
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+                    <p class="text-gray-700 text-lg mb-6">
+                        We invite submissions that compare rule-based, knowledge-based, and modern neural approaches to NLP tasks. Research exploring hybrid models or evaluating LLMs against traditional methods is particularly welcome.
+                    </p>
+                    <div class="text-center mt-8">
+                        <a href="https://softconf.com/ranlp25/R2LM2025/" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300 shadow-md">
+                            <span class="flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                </svg>
+                                Submit Your Paper
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col items-center justify-center">
+                <div class="text-blue-200 text-sm">
+                    RANLP 2025 Workshop - From Rules to Language Models
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sections = document.querySelectorAll('.section-container');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const hero = document.querySelector('#hero');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking a link
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                });
+            });
+
+            // Function to update active navigation link
+            function updateActiveLink() {
+                let currentSection = '';
+
+                // Check if we're at the hero section
+                const heroTop = hero.offsetTop;
+                const heroBottom = heroTop + hero.offsetHeight;
+
+                if (window.scrollY <= heroBottom - 100) {
+                    // We're at the hero section
+                    navLinks.forEach(link => {
+                        link.classList.remove('text-white', 'border-white');
+                        link.classList.add('text-blue-200');
+                    });
+                    return;
+                }
+
+                // Check other sections
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (window.scrollY >= (sectionTop - 100)) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('text-white', 'border-white');
+                    link.classList.add('text-blue-200');
+
+                    if (link.getAttribute('href') === `#${currentSection}`) {
+                        link.classList.remove('text-blue-200');
+                        link.classList.add('text-white', 'border-white');
+                    }
+                });
+            }
+
+            // Update active link on scroll
+            window.addEventListener('scroll', updateActiveLink);
+
+            // Initial check for active section
+            updateActiveLink();
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const sections = document.querySelectorAll('.section-container');
+            const options = {
+                threshold: 0.05
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const hero = document.getElementById('hero');
+            const heroHeight = hero.offsetHeight;
+
+            window.addEventListener('scroll', () => {
+                const scrollPosition = window.scrollY;
+                if (scrollPosition > heroHeight / 3) {
+                    hero.classList.add('collapsed');
+                } else {
+                    hero.classList.remove('collapsed');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
