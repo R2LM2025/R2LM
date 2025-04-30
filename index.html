@@ -81,20 +81,21 @@
                             </svg>
                         </button>
                         <!-- Desktop Navigation Links -->
-                        <div class="hidden md:flex space-x-8">
+                        <div class="hidden md:flex flex-wrap space-x-2 lg:space-x-4 xl:space-x-8">
                             <a href="#overview"
-                                class="nav-link px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent">Overview</a>
+                                class="nav-link px-2 lg:px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent text-sm lg:text-base">Overview</a>
+                            <a href="#description"
+                                class="nav-link px-2 lg:px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent text-sm lg:text-base">Description</a>
                             <a href="#dates"
-                                class="nav-link px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent">Dates</a>
+                                class="nav-link px-2 lg:px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent text-sm lg:text-base">Dates</a>
                             <a href="#schedule"
-                                class="nav-link px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent">Schedule</a>
+                                class="nav-link px-2 lg:px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent text-sm lg:text-base">Schedule</a>
                             <a href="#committees"
-                                class="nav-link px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent">Committees</a>
+                                class="nav-link px-2 lg:px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent text-sm lg:text-base">Committees</a>
                             <a href="#programme"
-                                class="nav-link px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent">Programme</a>
+                                class="nav-link px-2 lg:px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent text-sm lg:text-base">Programme</a>
                             <a href="#submissions"
-                                class="nav-link px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent">Call for Papers</a>
-
+                                class="nav-link px-2 lg:px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent text-sm lg:text-base">CFP</a>
                         </div>
                     </div>
                     <!-- Mobile Navigation Links -->
@@ -102,6 +103,8 @@
                         <div class="flex flex-col space-y-2 px-4 pb-4">
                             <a href="#overview"
                                 class="nav-link py-2 text-blue-200 hover:text-white transition-colors duration-200">Overview</a>
+                            <a href="#description"
+                                class="nav-link py-2 text-blue-200 hover:text-white transition-colors duration-200">Description</a>
                             <a href="#dates"
                                 class="nav-link py-2 text-blue-200 hover:text-white transition-colors duration-200">Dates</a>
                             <a href="#schedule"
@@ -111,7 +114,7 @@
                             <a href="#programme"
                                 class="nav-link py-2 text-blue-200 hover:text-white transition-colors duration-200">Programme</a>
                             <a href="#submissions"
-                                class="nav-link px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent">Call for Papers</a>
+                                class="nav-link px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent">CFP</a>
                         </div>
                     </div>
                 </div>
@@ -128,8 +131,11 @@
                     <h2 class="text-4xl md:text-5xl font-bold mb-2 leading-tight">
                         From Rules to Language Models
                     </h2>
-                    <p class="text-2xl md:text-3xl font-medium">
+                    <p class="text-2xl md:text-3xl font-medium mb-4">
                         Comparative Performance Evaluation
+                    </p>
+                    <p class="text-lg md:text-xl font-normal text-gray-200">
+                        RANLP Workshop • Varna, Bulgaria • September 11-13 | <span class="font-semibold">2025</span>
                     </p>
                 </div>
             </div>
@@ -162,6 +168,37 @@
                 </div>
             </div>
         </section>
+
+        <!-- Workshop Description & Topics Section -->
+        <section id="description" class="section-container py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-blue-900 mb-8">Workshop Description & Topics</h2>
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="prose max-w-none">
+                        <p class="text-gray-700 text-lg mb-6">
+                            Deep learning and large language models have taken the world by storm, as their applications have led to significant advancements in various NLP tasks (Zhao et al. 2025). However, their limitations remain evident (Hadi et al. 2023; Cheng et al. 2024). Certain tasks, such as Neural Machine Translation, continue to struggle with complex linguistic structures like multiword expressions (Miletic and Walde 2024). Similarly, some research suggests that rule-based approaches may still compete with, or even outperform, DL-based models in specific areas, such as anaphora resolution (Mitkov et al. 2024). Since the rise of DL and LL models, research has been focused on their application to every task, putting rule-based models and heuristics aside. This workshop aims to gather research on comparing rule-based and knowledge-based methods across various NLP applications, highlighting the emerging trends and challenges for the current NLP world. Therefore, we expect to cover the following topics:
+                        </p>
+
+                        <h3 class="text-xl font-semibold mb-4 text-blue-800">Topics:</h3>
+                        <ul class="list-disc list-outside ml-6 text-gray-700 text-lg space-y-4">
+                            <li>
+                                <span class="font-medium">The role of rule-based and knowledge-based approaches in modern NLP.</span> Despite the dominance of ML and DL, hybrid models, rule-based and knowledge-based approaches remain relevant in areas requiring high precision and explainability (e.g., grammar checkers or legal NLP).
+                            </li>
+                            <li>
+                                <span class="font-medium">Comparative analysis of rule-based, machine learning, deep-learning and large language models for different NLP tasks:</span> text classification, anaphora resolution, word sense disambiguation, etc.
+                            </li>
+                            <li>
+                                <span class="font-medium">Emerging trends in NLP research beyond deep learning:</span> general purpose models, neurosymbolic AI, retrieval-augmented generation (RAG), and few-shot learning are some examples of methods for advancing NLP.
+                            </li>
+                            <li>
+                                <span class="font-medium">Limitations and performance bottlenecks in scalability and accuracy of deep learning models.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <!-- Dates Section -->
         <section id="dates" class="section-container py-20 bg-gray-50">
