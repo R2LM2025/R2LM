@@ -86,6 +86,8 @@
                                 class="nav-link px-2 lg:px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent text-sm lg:text-base">Overview</a>
                             <a href="#description"
                                 class="nav-link px-2 lg:px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent text-sm lg:text-base">Description</a>
+                            <a href="#submissions"
+                                class="nav-link px-2 lg:px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent text-sm lg:text-base">Submissions</a>
                             <a href="#dates"
                                 class="nav-link px-2 lg:px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent text-sm lg:text-base">Dates</a>
                             <a href="#schedule"
@@ -94,8 +96,6 @@
                                 class="nav-link px-2 lg:px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent text-sm lg:text-base">Committees</a>
                             <a href="#programme"
                                 class="nav-link px-2 lg:px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent text-sm lg:text-base">Programme</a>
-                            <a href="#submissions"
-                                class="nav-link px-2 lg:px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent text-sm lg:text-base">CFP</a>
                         </div>
                     </div>
                     <!-- Mobile Navigation Links -->
@@ -105,6 +105,8 @@
                                 class="nav-link py-2 text-blue-200 hover:text-white transition-colors duration-200">Overview</a>
                             <a href="#description"
                                 class="nav-link py-2 text-blue-200 hover:text-white transition-colors duration-200">Description</a>
+                            <a href="#submissions"
+                                class="nav-link py-2 text-blue-200 hover:text-white transition-colors duration-200">Submissions</a>
                             <a href="#dates"
                                 class="nav-link py-2 text-blue-200 hover:text-white transition-colors duration-200">Dates</a>
                             <a href="#schedule"
@@ -113,8 +115,6 @@
                                 class="nav-link py-2 text-blue-200 hover:text-white transition-colors duration-200">Committees</a>
                             <a href="#programme"
                                 class="nav-link py-2 text-blue-200 hover:text-white transition-colors duration-200">Programme</a>
-                            <a href="#submissions"
-                                class="nav-link px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent">CFP</a>
                         </div>
                     </div>
                 </div>
@@ -175,23 +175,40 @@
                 <h2 class="text-3xl font-bold text-blue-900 mb-8">Workshop Description & Topics</h2>
                 <div class="bg-white rounded-lg shadow-lg p-8">
                     <div class="prose max-w-none">
+                        <h3 class="text-xl font-semibold mb-4 text-blue-800">Workshop Description</h3>
                         <p class="text-gray-700 text-lg mb-6">
-                            Deep learning and large language models have taken the world by storm, as their applications have led to significant advancements in various NLP tasks (Zhao et al. 2025). However, their limitations remain evident (Hadi et al. 2023; Cheng et al. 2024). Certain tasks, such as Neural Machine Translation, continue to struggle with complex linguistic structures like multiword expressions (Miletic and Walde 2024). Similarly, some research suggests that rule-based approaches may still compete with, or even outperform, DL-based models in specific areas, such as anaphora resolution (Mitkov et al. 2024). Since the rise of DL and LL models, research has been focused on their application to every task, putting rule-based models and heuristics aside. This workshop aims to gather research on comparing rule-based and knowledge-based methods across various NLP applications, highlighting the emerging trends and challenges for the current NLP world. Therefore, we expect to cover the following topics:
+                            Deep Learning (DL) and Large Language Models (LLMs) have significantly advanced many Natural Language Processing (NLP) tasks (Zhao et al., 2025). However, these models still have limitations, particularly in complex linguistic scenarios such as multiword expressions or long-context reasoning (Miletić & Walde, 2024; Cheng et al., 2024). Moreover, critical concerns remain about scalability, interpretability, and robustness to adversarial inputs (Barone et al., 2017; Anjum & Krestel, 2024).
+                        </p>
+                        <p class="text-gray-700 text-lg mb-6">
+                            This workshop responds to a recent interest in revisiting rule-based and knowledge-based methods that often offer high precision, better explainability, and domain adaptability—features essential in applications like grammar checking, legal document analysis, and medical NLP. Despite the dominance of end-to-end neural models, recent comparative evaluations show that symbolic approaches still perform competitively (or even do better) on specific tasks, especially when training data is scarce or interpretability is critical (Mitkov et al., 2024; Vastl et al., 2024).
+                        </p>
+                        <p class="text-gray-700 text-lg mb-6">
+                            In addition to exploring these traditional methodologies, the workshop will examine emerging trends that offer alternatives or complements to LLMs. These include retrieval-augmented generation (RAG) techniques (Su et al., 2025; Wu et al., 2025), neurosymbolic AI that integrates neural and symbolic reasoning (Sheth et al., 2023; Bhuyan et al., 2024), and few-shot or zero-shot learning approaches (Zeng & Xiao, 2024). General-purpose foundation models (Church & Alonso, 2024) and knowledge-graph–powered systems (Chen et al., 2025; Vidal et al., 2025) also represent promising directions.
+                        </p>
+                        <p class="text-gray-700 text-lg mb-6">
+                            This workshop aims to encourage a dialogue between advocates of symbolic and statistical models and to critically evaluate how both approaches can complement each other in building robust, efficient, and explainable NLP systems.
                         </p>
 
-                        <h3 class="text-xl font-semibold mb-4 text-blue-800">Topics:</h3>
+                        <h3 class="text-xl font-semibold mb-4 text-blue-800">Topics</h3>
+                        <p class="text-gray-700 text-lg mb-4">
+                            This workshop invites research papers on comparing rule-based and knowledge-based methods across various NLP applications, highlighting the emerging trends and challenges for the current NLP world. Therefore, we expect to cover the following topics:
+                        </p>
                         <ul class="list-disc list-outside ml-6 text-gray-700 text-lg space-y-4">
                             <li>
-                                <span class="font-medium">The role of rule-based and knowledge-based approaches in modern NLP.</span> Despite the dominance of ML and DL, hybrid models, rule-based and knowledge-based approaches remain relevant in areas requiring high precision and explainability (e.g., grammar checkers or legal NLP).
+                                <span class="font-medium">The role of rule-based and knowledge-based approaches in modern NLP.</span> 
+                                Despite the dominance of ML and DL, hybrid models, rule-based approaches, and knowledge-based approaches remain relevant in areas requiring high precision and explainability. Traditional techniques are still valuable for specific domains, especially when data is scarce, interpretability is required, or robustness to adversarial inputs is essential.
                             </li>
                             <li>
-                                <span class="font-medium">Comparative analysis of rule-based, machine learning, deep-learning and large language models for different NLP tasks:</span> text classification, anaphora resolution, word sense disambiguation, etc.
+                                <span class="font-medium">Comparative analysis of rule-based, machine-learning, deep-learning and large language models for different NLP tasks.</span>
+                                Evaluating different methodologies across various NLP tasks is crucial for understanding their strengths, limitations, and best applications. We also seek to explore rule-based techniques for modern NLP applications since rules and heuristics remain crucial for preprocessing, domain-specific NLP, and hybrid systems.
                             </li>
                             <li>
-                                <span class="font-medium">Emerging trends in NLP research beyond deep learning:</span> general purpose models, neurosymbolic AI, retrieval-augmented generation (RAG), and few-shot learning are some examples of methods for advancing NLP.
+                                <span class="font-medium">Emerging trends in NLP research beyond deep learning and Large Language Models.</span>
+                                General purpose models, neurosymbolic AI, retrieval-augmented generation (RAG), and few-shot learning are some examples of methods for advancing NLP.
                             </li>
                             <li>
                                 <span class="font-medium">Limitations and performance bottlenecks in scalability and accuracy of deep learning models.</span>
+                                Large-scale models require vast training data, extensive compute power, and struggle with long-context reasoning. Overfitting when fine-tuning or lack of interpretability remain key challenges.
                             </li>
                         </ul>
                     </div>
@@ -199,6 +216,40 @@
             </div>
         </section>
 
+        <!-- Submissions/Call for Papers Section -->
+        <section id="submissions" class="section-container py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-blue-900 mb-8">Submissions</h2>
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="prose max-w-none">
+                        <p class="text-gray-700 text-lg mb-6">
+                            We invite submissions that compare rule-based, knowledge-based, and modern neural approaches to NLP tasks. Research exploring hybrid models or evaluating LLMs against traditional methods is particularly welcome.
+                        </p>
+                        
+                        <h3 class="text-xl font-semibold mb-4 text-blue-800">Submission Guidelines</h3>
+                        <p class="text-gray-700 text-lg mb-4">
+                            Submissions must follow the <a href="https://ranlp.org/ranlp2025/index.php/submissions/" target="_blank" class="text-blue-600 hover:text-blue-800 underline">RANLP 2025 submission guidelines</a>, using ACL-style templates (LaTeX or MS Word).
+                        </p>
+                        
+                        <ul class="list-disc list-outside ml-6 text-gray-700 text-lg space-y-3 mb-6">
+                            <li><span class="font-medium">Long papers:</span> Up to 8 pages (excluding references)</li>
+                            <li><span class="font-medium">Short papers:</span> Up to 4 pages (excluding references)</li>
+                            <li><span class="font-medium">Publication:</span> Accepted papers will be included in the workshop proceedings which are part of the ACL Anthology.</li>
+                        </ul>
+                        
+                        <div class="text-center mt-8">
+                            <a href="https://softconf.com/ranlp25/R2LM2025/" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300 shadow-md">
+                                <span class="flex items-center justify-center"> 
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" /> 
+                                    </svg> Submit Your Paper 
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Dates Section -->
         <section id="dates" class="section-container py-20 bg-gray-50">
@@ -224,9 +275,8 @@
                         <h3 class="text-xl font-semibold mb-4 text-blue-800">Submission Deadlines</h3>
                         <ul class="space-y-4">
                             <li class="flex items-start">
-                                <span class="text-blue-600 font-medium w-60">Workshop paper camera-ready
-                                    versions:</span>
-                                <span>30 August 2025</span>
+                                <span class="text-blue-600 font-medium w-60">Camera-ready papers due:</span>
+                                <span>20 August 2025</span>
                             </li>
                             <li class="flex items-start">
                                 <span class="text-blue-600 font-medium w-60">Workshop camera-ready proceedings
@@ -234,8 +284,8 @@
                                 <span>8 September 2025</span>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-blue-600 font-medium w-60">Workshops:</span>
-                                <span>11-13 September 2025</span>
+                                <span class="text-blue-600 font-medium w-60">Workshop dates:</span>
+                                <span>11, 12 or 13 September 2025</span>
                             </li>
                         </ul>
                     </div>
@@ -311,25 +361,6 @@
                 </div>
             </div>
         </section>
-
-        <section id="submissions" class="section-container py-20 bg-gray-50">
-         <div class="container mx-auto px-4">
-             <h2 class="text-3xl font-bold text-blue-900 mb-8">Call for Papers</h2>
-                 <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
-                     <p class="text-gray-700 text-lg mb-6">
-                        We invite submissions that compare rule-based, knowledge-based, and modern neural approaches to NLP tasks. Research exploring hybrid models or evaluating LLMs against traditional methods is particularly welcome. 
-                     </p>
-                 <div class="text-center mt-8">
-                 <a href="https://softconf.com/ranlp25/R2LM2025/" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300 shadow-md">
-                     <span class="flex items-center justify-center"> <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" /> </svg> Submit Your Paper 
-                     </span>
-                 </a>
-                 </div>
-             </div>
-         </div>
-         </section>
-        
     </main>
 
     <!-- Footer -->
