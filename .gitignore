@@ -1,0 +1,24 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# Build output
+src/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor configs
+.vscode/
+.idea/
+
+# Tailwind cache (por si acaso)
+.tailwind-cache/
+
+tailwind_config.js
+package.json
+package-lock.json
