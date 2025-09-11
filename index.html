@@ -349,26 +349,21 @@
                 <h2 class="text-3xl font-bold text-blue-900 mb-8">Schedule</h2>
                 <div class="bg-white rounded-lg shadow-lg p-8">
                     <div id="schedule-container">
-                        
+                    
                     </div>
                 </div>
             </div>
         </section>
 
         <script>
+        
         const scheduleData = {
             "September 11, 2025": [
-                {
-                    time: "09:00 - 09:15",
-                    type: "registration",
-                    title: "Arrival",
-                    speaker: null
-                },
                 {
                     time: "09:15 - 09:30",
                     type: "opening",
                     title: "Opening Remarks",
-                    speaker: "Organizing Committee"
+                    speaker: "Ernesto Estevanell-Valladares - Organizing Committee"
                 },
                 {
                     time: "09:30 - 10:30",
@@ -387,28 +382,22 @@
                     time: "11:00 - 11:30",
                     type: "session",
                     title: "A Comparative Study of Hyperbole Detection Methods: From Rule-Based Approaches through Deep Learning Models to Large Language Models",
-                    speaker: null
+                    authors: "Silvia Gargova, Nevena Grigorova and Ruslan Mitkov"
                 },
                 {
                     time: "11:30 - 12:00",
                     type: "session",
                     title: "Evaluating the Performance of Transformers in Translating Low-Resource Languages through Akkadian",
-                    speaker: null
+                    authors: "Daniel A. Jones and Ruslan Mitkov"
                 },
                 {
                     time: "12:00 - 12:30",
                     type: "session",
-                    title: "Detection of AI-generated Content in Scientific Abstracts",
-                    speaker: null
-                },
-                {
-                    time: "12:30 - 13:00",
-                    type: "session",
                     title: "Beyond BLEU: Ethical Risks of Misleading Evaluation in Domain-Specific QA with LLMs",
-                    speaker: null
+                    authors: "Ayoub Nainia, Régine Vignes-Lebbe, Hajar Mousannif and Jihad Zahir"
                 },
                 {
-                    time: "13:00 - 14:00",
+                    time: "12:30 - 14:00",
                     type: "lunch",
                     title: "Lunch Break",
                     speaker: null
@@ -423,17 +412,24 @@
                     time: "15:00 - 15:30",
                     type: "session",
                     title: "KGEIR: Knowledge Graph-Enhanced Iterative Reasoning for Multi-Hop Question Answering",
-                    speaker: null
+                    authors: "Authors to be announced"
                 },
                 {
                     time: "15:30 - 16:00",
                     type: "session",
                     title: "Systematic Evaluation of Rule-Based Analytics for LLM-Driven Graph Data Modelling",
-                    speaker: null
+                    authors: "Fabio Antonio Yanez, Andrés Montoyo, Armando Suárez, Alejandro Piad-Morffis and Yudivián Almeida Cruz"
+                },
+                {
+                    time: "16:00 - 16:30",
+                    type: "session",
+                    title: "Detection of AI-generated Content in Scientific Abstracts",
+                    authors: "Ernesto Luis Estevanell-Valladares, Alicia Picazo-Izquierdo and Ruslan Mitkov"
                 }
             ]
         };
 
+        // Función para generar el HTML del schedule
         function generateScheduleHTML() {
             let html = '';
 
@@ -470,6 +466,11 @@
                                             ${item.affiliation ? `<br><span class="text-sm text-gray-600">${item.affiliation}</span>` : ''}
                                         </p>
                                     ` : ''}
+                                    ${item.authors ? `
+                                        <p class="text-gray-600 text-sm mt-2">
+                                            <span class="font-medium">Authors:</span> ${item.authors}
+                                        </p>
+                                    ` : ''}
                                 </div>
                             </div>
                         </div>
@@ -485,6 +486,7 @@
             return html;
         }
 
+        // Cargar el schedule cuando la página esté lista
         document.addEventListener('DOMContentLoaded', function() {
             const container = document.getElementById('schedule-container');
             if (container) {
