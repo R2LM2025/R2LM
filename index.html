@@ -356,226 +356,265 @@
         </section>
 
         <script>
+
+const scheduleData = {
+    "September 11, 2025": [
+        {
+            time: "09:15 - 09:30",
+            type: "opening",
+            title: "Opening Remarks",
+            speaker: "Ernesto Estevanell-Valladares - Organizing Committee"
+        },
+        {
+            time: "09:30 - 10:30",
+            type: "keynote",
+            title: "Keynote Speech",
+            speaker: "Tharindu Ranasinghe",
+            affiliation: "Cardiff University, UK"
+        },
+        {
+            time: "10:30 - 11:00",
+            type: "break",
+            title: "Coffee Break and Poster Session",
+            speaker: null
+        },
+        {
+            time: "11:00 - 11:30",
+            type: "session",
+            title: "A Comparative Study of Hyperbole Detection Methods: From Rule-Based Approaches through Deep Learning Models to Large Language Models",
+            authors: "Silvia Gargova, Nevena Grigorova and Ruslan Mitkov"
+        },
+        {
+            time: "11:30 - 12:00",
+            type: "session",
+            title: "Evaluating the Performance of Transformers in Translating Low-Resource Languages through Akkadian",
+            authors: "Daniel A. Jones and Ruslan Mitkov"
+        },
+        {
+            time: "12:00 - 12:30",
+            type: "session",
+            title: "Beyond BLEU: Ethical Risks of Misleading Evaluation in Domain-Specific QA with LLMs",
+            authors: "Ayoub Nainia, Régine Vignes-Lebbe, Hajar Mousannif and Jihad Zahir"
+        },
+        {
+            time: "12:30 - 14:00",
+            type: "lunch",
+            title: "Lunch Break",
+            speaker: null
+        },
+        {
+            time: "14:00 - 15:00",
+            type: "poster",
+            title: "Poster Session",
+            speaker: null
+        },
+        {
+            time: "15:00 - 15:30",
+            type: "session",
+            title: "KGEIR: Knowledge Graph-Enhanced Iterative Reasoning for Multi-Hop Question Answering",
+            authors: "Authors to be announced"
+        },
+        {
+            time: "15:30 - 16:00",
+            type: "session",
+            title: "Systematic Evaluation of Rule-Based Analytics for LLM-Driven Graph Data Modelling",
+            authors: "Fabio Antonio Yanez, Andrés Montoyo, Armando Suárez, Alejandro Piad-Morffis and Yudivián Almeida Cruz"
+        },
+        {
+            time: "16:00 - 16:30",
+            type: "break",
+            title: "Coffee Break and Poster Session",
+            speaker: null
+            
+        },
+        {
+            time: "16:30 - 17:00",
+            type: "session",
+            title: "Detection of AI-generated Content in Scientific Abstracts",
+            authors: "Ernesto Luis Estevanell-Valladares, Alicia Picazo-Izquierdo and Ruslan Mitkov"
+        },
+        {
+            time: "17:00 - 17:30",
+            type: "session",
+            title: "United We Fine-Tune: Structurally Complementary Datasets for Hope Speech Detection",
+            authors: "Priyadharshini Krishnaraj, Tulio Ferreira Leite da Silva, Gonzalo Freijedo Aduna, Samuel Chen, Farah Benarama, Alda Mari"
+        },
+        {
+            time: "17:30 - 18:00",
+            type: "session",
+            title: "Transformers and Large Language Models for Hope Speech Detection: A Multilingual Approach",
+            authors: "Diana Madera"
+        }
+    ],
+    "Posters Sessions" :[
+        {
+            type: "poster",
+            title: "CoVeGAT: A Hybrid LLM & Graph Attention Pipeline for Accurate Citation Aligned Claim Verification",
+            authors: "Max Bader, Akshatha Arunkumar, Ohan Ahmad, Maruf Hassen, Charles Duong, Vasu Sharma, Sean O'Brien and Kevin Zhu"
+        },
+        {
+            
+            type: "poster",
+            title: "From Zero to Hero: Building Serbian NER from Rules to LLMs",
+            authors: "Milica Ikonić Nešić, Sasa Petalinkar, Ranka Stanković and Ruslan Mitkov"
+        },
+        {
+            
+            type: "poster",
+            title: "Improved Contrastive Learning for Commonsense-Aware Knowledge Representation",
+            authors: "Rongwen Zhao and Jeffrey Flanigan"
+        },
+        {
+            type: "poster",
+            title: "Evaluating Structured Decoding for Text-to-Table Generation: Evidence from Three Datasets",
+            authors: "Julian Oestreich and Lydia Müller"
+        },
+        {
+            type: "poster",
+            title: "Enhancing the Performance of Spoiler Review Detection by a LLM with Hints",
+            authors: "Genta Nishi and Einoshin Suzuki"
+        },
+        {
+            type: "poster",
+            title: "TextBandit: Evaluating Probabilistic Reasoning in LLMs Through Language-Only Decision Tasks",
+            authors: "Arjun Damerla, Jimin Lim, Yanxi Jiang, Nam Nguyen Hoai Le and Nikil Selladurai"
+        },
+        {
+            type: "poster",
+            title: "Does Anaphora Resolution Improve LLM Fine-Tuning for Summarisation?",
+            authors: "Yi Chun Lo and Ruslan Mitkov"
+        },
+        {
+            type: "poster",
+            title: "A Comparative Study of Vision Transformers and Multimodal Language Models for Violence Detection in Videos",
+            authors: "Tomas Ditchfield-Ogle and Ruslan Mitkov"
+        }
+    ],
+    "ONLINE PRE-RECORDED VIDEO PRESENTATIONS": [
+        {
+            type: "video",
+            title: "Evaluating the LLM and NMT Models in Translating Low-Resourced Languages",
+            authors: "Julita JP Pucinskaite and Ruslan Mitkov",
+            videoUrl: "https://drive.google.com/file/d/1jcBPELdl-FF5N7wYUH-UcfeDzaAYnPp0/view"
+        },
+        {
+            type: "video", 
+            title: "From Handcrafted Features to LLMs: A Comparative Study in Native Language Identification",
+            authors: "Aliyah C. Vanterpool and Katsiaryna Aharodnik",
+            videoUrl: "/"
+        },
+        {
+            type: "video",
+            title: "Does Anaphora Resolution Improve LLM Fine-Tuning for Summarisation? ",
+            authors: "Yi Chun Lo and Ruslan Mitkov",
+            videoUrl: "/"
+        },
+        {
+            type: "video",
+            title: "A Comparative Study of Vision Transformers and Multimodal Language Models for Violence Detection in Videos",
+            authors: "Tomas Ditchfield-Ogle and Ruslan Mitkov",
+            videoUrl: "https://www.youtube.com/watch?v=9E2PrsJvDbU"
+        }
+       
+    ]
+};
+
+
+function generateScheduleHTML() {
+    let html = '';
+
+    Object.keys(scheduleData).forEach(date => {
+
+        const isPostersSection = date === "Posters Sessions";
+        const isVideoSection = date === "ONLINE PRE-RECORDED VIDEO PRESENTATIONS";
         
-        const scheduleData = {
-            "September 11, 2025": [
-                {
-                    time: "09:15 - 09:30",
-                    type: "opening",
-                    title: "Opening Remarks",
-                    speaker: "Ernesto Estevanell-Valladares - Organizing Committee"
-                },
-                {
-                    time: "09:30 - 10:30",
-                    type: "keynote",
-                    title: "Keynote Speech",
-                    speaker: "Tharindu Ranasinghe",
-                    affiliation: "Cardiff University, UK"
-                },
-                {
-                    time: "10:30 - 11:00",
-                    type: "break",
-                    title: "Coffee Break and Poster Session",
-                    speaker: null
-                },
-                {
-                    time: "11:00 - 11:30",
-                    type: "session",
-                    title: "A Comparative Study of Hyperbole Detection Methods: From Rule-Based Approaches through Deep Learning Models to Large Language Models",
-                    authors: "Silvia Gargova, Nevena Grigorova and Ruslan Mitkov"
-                },
-                {
-                    time: "11:30 - 12:00",
-                    type: "session",
-                    title: "Evaluating the Performance of Transformers in Translating Low-Resource Languages through Akkadian",
-                    authors: "Daniel A. Jones and Ruslan Mitkov"
-                },
-                {
-                    time: "12:00 - 12:30",
-                    type: "session",
-                    title: "Beyond BLEU: Ethical Risks of Misleading Evaluation in Domain-Specific QA with LLMs",
-                    authors: "Ayoub Nainia, Régine Vignes-Lebbe, Hajar Mousannif and Jihad Zahir"
-                },
-                {
-                    time: "12:30 - 14:00",
-                    type: "lunch",
-                    title: "Lunch Break",
-                    speaker: null
-                },
-                {
-                    time: "14:00 - 15:00",
-                    type: "poster",
-                    title: "Poster Session",
-                    speaker: null
-                },
-                {
-                    time: "15:00 - 15:30",
-                    type: "session",
-                    title: "KGEIR: Knowledge Graph-Enhanced Iterative Reasoning for Multi-Hop Question Answering",
-                    authors: "Authors to be announced"
-                },
-                {
-                    time: "15:30 - 16:00",
-                    type: "session",
-                    title: "Systematic Evaluation of Rule-Based Analytics for LLM-Driven Graph Data Modelling",
-                    authors: "Fabio Antonio Yanez, Andrés Montoyo, Armando Suárez, Alejandro Piad-Morffis and Yudivián Almeida Cruz"
-                },
-                {
-                    time: "16:00 - 16:30",
-                    type: "break",
-                    title: "Coffee Break and Poster Session",
-                    speaker: null
-                    
-                },
-                {
-                    time: "16:30 - 17:00",
-                    type: "session",
-                    title: "Detection of AI-generated Content in Scientific Abstracts",
-                    authors: "Ernesto Luis Estevanell-Valladares, Alicia Picazo-Izquierdo and Ruslan Mitkov"
-                },
-                {
-                    time: "17:00 - 17:30",
-                    type: "session",
-                    title: "United We Fine-Tune: Structurally Complementary Datasets for Hope Speech Detection",
-                    authors: "Priyadharshini Krishnaraj, Tulio Ferreira Leite da Silva, Gonzalo Freijedo Aduna, Samuel Chen, Farah Benarama, Alda Mari"
-                },
-                {
-                    time: "17:30 - 18:00",
-                    type: "session",
-                    title: "Transformers and Large Language Models for Hope Speech Detection: A Multilingual Approach",
-                    authors: "Diana Madera"
-                }
-            ],
-            "Posters Sessions" :[
-                {
-                    type: "poster",
-                    title: "CoVeGAT: A Hybrid LLM & Graph Attention Pipeline for Accurate Citation Aligned Claim Verification",
-                    authors: "Max Bader, Akshatha Arunkumar, Ohan Ahmad, Maruf Hassen, Charles Duong, Vasu Sharma, Sean O'Brien and Kevin Zhu"
-                },
-                {
-                    
-                    type: "poster",
-                    title: "From Zero to Hero: Building Serbian NER from Rules to LLMs",
-                    authors: "Milica Ikonić Nešić, Sasa Petalinkar, Ranka Stanković and Ruslan Mitkov"
-                },
-                {
-                    
-                    type: "poster",
-                    title: "Improved Contrastive Learning for Commonsense-Aware Knowledge Representation",
-                    authors: "Rongwen Zhao and Jeffrey Flanigan"
-                },
-                {
-                    type: "poster",
-                    title: "Evaluating Structured Decoding for Text-to-Table Generation: Evidence from Three Datasets",
-                    authors: "Julian Oestreich and Lydia Müller"
-                },
-                {
-                    type: "poster",
-                    title: "Enhancing the Performance of Spoiler Review Detection by a LLM with Hints",
-                    authors: "Genta Nishi and Einoshin Suzuki"
-                },
-                {
-                    type: "poster",
-                    title: "TextBandit: Evaluating Probabilistic Reasoning in LLMs Through Language-Only Decision Tasks",
-                    authors: "Arjun Damerla, Jimin Lim, Yanxi Jiang, Nam Nguyen Hoai Le and Nikil Selladurai"
-                },
-                {
-                    type: "poster",
-                    title: "Does Anaphora Resolution Improve LLM Fine-Tuning for Summarisation?",
-                    authors: "Yi Chun Lo and Ruslan Mitkov"
-                },
-                {
-                    type: "poster",
-                    title: "A Comparative Study of Vision Transformers and Multimodal Language Models for Violence Detection in Videos",
-                    authors: "Tomas Ditchfield-Ogle"
-                }
-            ]
-        };
+        html += `
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-blue-800 mb-6">${date}</h3>
+                <div class="space-y-4">
+        `;
 
-        // Función para generar el HTML del schedule
-        function generateScheduleHTML() {
-            let html = '';
+        scheduleData[date].forEach(item => {
+            const typeClasses = {
+                'keynote': 'border-l-4 border-red-500 bg-red-50',
+                'session': 'border-l-4 border-blue-500 bg-blue-50',
+                'poster': 'border-l-4 border-green-500 bg-green-50',
+                'video': 'border-l-4 border-orange-500 bg-orange-50',
+                'break': 'border-l-4 border-gray-300 bg-gray-50',
+                'lunch': 'border-l-4 border-yellow-500 bg-yellow-50',
+                'opening': 'border-l-4 border-purple-500 bg-purple-50',
+                'closing': 'border-l-4 border-purple-500 bg-purple-50',
+                'registration': 'border-l-4 border-indigo-500 bg-indigo-50'
+            };
 
-            Object.keys(scheduleData).forEach(date => {
-                // Verificar si es la sección de pósters
-                const isPostersSection = date === "Posters Sessions";
+            if (isPostersSection || isVideoSection) {
+                
+                const defaultClass = isVideoSection ? 'border-l-4 border-orange-500 bg-orange-50' : 'border-l-4 border-green-500 bg-green-50';
                 
                 html += `
-                    <div class="mb-8">
-                        <h3 class="text-2xl font-bold text-blue-800 mb-6">${date}</h3>
-                        <div class="space-y-4">
-                `;
-
-                scheduleData[date].forEach(item => {
-                    const typeClasses = {
-                        'keynote': 'border-l-4 border-red-500 bg-red-50',
-                        'session': 'border-l-4 border-blue-500 bg-blue-50',
-                        'poster': 'border-l-4 border-green-500 bg-green-50',
-                        'break': 'border-l-4 border-gray-300 bg-gray-50',
-                        'lunch': 'border-l-4 border-yellow-500 bg-yellow-50',
-                        'opening': 'border-l-4 border-purple-500 bg-purple-50',
-                        'closing': 'border-l-4 border-purple-500 bg-purple-50',
-                        'registration': 'border-l-4 border-indigo-500 bg-indigo-50'
-                    };
-
-                    if (isPostersSection) {
-                        // Para la sección de pósters, no mostrar el tiempo
-                        html += `
-                            <div class="p-4 rounded-lg ${typeClasses[item.type] || 'border-l-4 border-green-500 bg-green-50'}">
-                                <div class="flex flex-col">
-                                    <h4 class="font-semibold text-lg mb-1">${item.title}</h4>
-                                    ${item.authors ? `
-                                        <p class="text-gray-600 text-sm mt-2">
-                                            <span class="font-medium">Authors:</span> ${item.authors}
-                                        </p>
-                                    ` : ''}
-                                </div>
-                            </div>
-                        `;
-                    } else {
-                        // Para el resto de secciones, mostrar el tiempo normalmente
-                        html += `
-                            <div class="p-4 rounded-lg ${typeClasses[item.type] || 'border-l-4 border-gray-300 bg-gray-50'}">
-                                <div class="flex flex-col md:flex-row md:items-start">
-                                    <div class="md:w-32 flex-shrink-0 mb-2 md:mb-0">
-                                        <span class="font-bold text-blue-900">${item.time}</span>
-                                    </div>
-                                    <div class="flex-1">
-                                        <h4 class="font-semibold text-lg mb-1">${item.title}</h4>
-                                        ${item.speaker ? `
-                                            <p class="text-gray-700 mb-2">
-                                                <span class="font-medium">Speaker:</span> ${item.speaker}
-                                                ${item.affiliation ? `<br><span class="text-sm text-gray-600">${item.affiliation}</span>` : ''}
-                                            </p>
-                                        ` : ''}
-                                        ${item.authors ? `
-                                            <p class="text-gray-600 text-sm mt-2">
-                                                <span class="font-medium">Authors:</span> ${item.authors}
-                                            </p>
-                                        ` : ''}
-                                    </div>
-                                </div>
-                            </div>
-                        `;
-                    }
-                });
-
-                html += `
+                    <div class="p-4 rounded-lg ${typeClasses[item.type] || defaultClass}">
+                        <div class="flex flex-col">
+                            ${isVideoSection && item.videoUrl ? `
+                                <h4 class="font-semibold text-lg mb-1">
+                                    <a href="${item.videoUrl}" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200">
+                                        ${item.title}
+                                    </a>
+                                </h4>
+                            ` : `
+                                <h4 class="font-semibold text-lg mb-1">${item.title}</h4>
+                            `}
+                            ${item.authors ? `
+                                <p class="text-gray-600 text-sm mt-2">
+                                    <span class="font-medium">Authors:</span> ${item.authors}
+                                </p>
+                            ` : ''}
                         </div>
                     </div>
                 `;
-            });
-
-            return html;
-        }
-
-        // Cargar el schedule cuando la página esté lista
-        document.addEventListener('DOMContentLoaded', function() {
-            const container = document.getElementById('schedule-container');
-            if (container) {
-                container.innerHTML = generateScheduleHTML();
+            } else {
+                
+                html += `
+                    <div class="p-4 rounded-lg ${typeClasses[item.type] || 'border-l-4 border-gray-300 bg-gray-50'}">
+                        <div class="flex flex-col md:flex-row md:items-start">
+                            <div class="md:w-32 flex-shrink-0 mb-2 md:mb-0">
+                                <span class="font-bold text-blue-900">${item.time}</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-lg mb-1">${item.title}</h4>
+                                ${item.speaker ? `
+                                    <p class="text-gray-700 mb-2">
+                                        <span class="font-medium">Speaker:</span> ${item.speaker}
+                                        ${item.affiliation ? `<br><span class="text-sm text-gray-600">${item.affiliation}</span>` : ''}
+                                    </p>
+                                ` : ''}
+                                ${item.authors ? `
+                                    <p class="text-gray-600 text-sm mt-2">
+                                        <span class="font-medium">Authors:</span> ${item.authors}
+                                    </p>
+                                ` : ''}
+                            </div>
+                        </div>
+                    </div>
+                `;
             }
         });
+
+        html += `
+                </div>
+            </div>
+        `;
+    });
+
+    return html;
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const container = document.getElementById('schedule-container');
+    if (container) {
+        container.innerHTML = generateScheduleHTML();
+    }
+});
         </script>
 
         <!-- Committees Section -->
