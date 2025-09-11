@@ -445,6 +445,50 @@
                     title: "Transformers and Large Language Models for Hope Speech Detection: A Multilingual Approach",
                     authors: "Diana Madera"
                 }
+            ],
+            "Posters Sessions" :[
+                {
+                    type: "poster",
+                    title: "CoVeGAT: A Hybrid LLM & Graph Attention Pipeline for Accurate Citation Aligned Claim Verification",
+                    authors: "Max Bader, Akshatha Arunkumar, Ohan Ahmad, Maruf Hassen, Charles Duong, Vasu Sharma, Sean O'Brien and Kevin Zhu"
+                },
+                {
+                    
+                    type: "poster",
+                    title: "From Zero to Hero: Building Serbian NER from Rules to LLMs",
+                    authors: "Milica Ikonić Nešić, Sasa Petalinkar, Ranka Stanković and Ruslan Mitkov"
+                },
+                {
+                    
+                    type: "poster",
+                    title: "Improved Contrastive Learning for Commonsense-Aware Knowledge Representation",
+                    authors: "Rongwen Zhao and Jeffrey Flanigan"
+                },
+                {
+                    type: "poster",
+                    title: "Evaluating Structured Decoding for Text-to-Table Generation: Evidence from Three Datasets",
+                    authors: "Julian Oestreich and Lydia Müller"
+                },
+                {
+                    type: "poster",
+                    title: "Enhancing the Performance of Spoiler Review Detection by a LLM with Hints",
+                    authors: "Genta Nishi and Einoshin Suzuki"
+                },
+                {
+                    type: "poster",
+                    title: "TextBandit: Evaluating Probabilistic Reasoning in LLMs Through Language-Only Decision Tasks",
+                    authors: "Arjun Damerla, Jimin Lim, Yanxi Jiang, Nam Nguyen Hoai Le and Nikil Selladurai"
+                },
+                {
+                    type: "poster",
+                    title: "Does Anaphora Resolution Improve LLM Fine-Tuning for Summarisation?",
+                    authors: "Yi Chun Lo and Ruslan Mitkov"
+                },
+                {
+                    type: "poster",
+                    title: "A Comparative Study of Vision Transformers and Multimodal Language Models for Violence Detection in Videos",
+                    authors: "Tomas Ditchfield-Ogle"
+                }
             ]
         };
 
@@ -453,6 +497,9 @@
             let html = '';
 
             Object.keys(scheduleData).forEach(date => {
+                // Verificar si es la sección de pósters
+                const isPostersSection = date === "Posters Sessions";
+                
                 html += `
                     <div class="mb-8">
                         <h3 class="text-2xl font-bold text-blue-800 mb-6">${date}</h3>
@@ -471,20 +518,12 @@
                         'registration': 'border-l-4 border-indigo-500 bg-indigo-50'
                     };
 
-                    html += `
-                        <div class="p-4 rounded-lg ${typeClasses[item.type] || 'border-l-4 border-gray-300 bg-gray-50'}">
-                            <div class="flex flex-col md:flex-row md:items-start">
-                                <div class="md:w-32 flex-shrink-0 mb-2 md:mb-0">
-                                    <span class="font-bold text-blue-900">${item.time}</span>
-                                </div>
-                                <div class="flex-1">
+                    if (isPostersSection) {
+                        // Para la sección de pósters, no mostrar el tiempo
+                        html += `
+                            <div class="p-4 rounded-lg ${typeClasses[item.type] || 'border-l-4 border-green-500 bg-green-50'}">
+                                <div class="flex flex-col">
                                     <h4 class="font-semibold text-lg mb-1">${item.title}</h4>
-                                    ${item.speaker ? `
-                                        <p class="text-gray-700 mb-2">
-                                            <span class="font-medium">Speaker:</span> ${item.speaker}
-                                            ${item.affiliation ? `<br><span class="text-sm text-gray-600">${item.affiliation}</span>` : ''}
-                                        </p>
-                                    ` : ''}
                                     ${item.authors ? `
                                         <p class="text-gray-600 text-sm mt-2">
                                             <span class="font-medium">Authors:</span> ${item.authors}
@@ -492,8 +531,33 @@
                                     ` : ''}
                                 </div>
                             </div>
-                        </div>
-                    `;
+                        `;
+                    } else {
+                        // Para el resto de secciones, mostrar el tiempo normalmente
+                        html += `
+                            <div class="p-4 rounded-lg ${typeClasses[item.type] || 'border-l-4 border-gray-300 bg-gray-50'}">
+                                <div class="flex flex-col md:flex-row md:items-start">
+                                    <div class="md:w-32 flex-shrink-0 mb-2 md:mb-0">
+                                        <span class="font-bold text-blue-900">${item.time}</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-semibold text-lg mb-1">${item.title}</h4>
+                                        ${item.speaker ? `
+                                            <p class="text-gray-700 mb-2">
+                                                <span class="font-medium">Speaker:</span> ${item.speaker}
+                                                ${item.affiliation ? `<br><span class="text-sm text-gray-600">${item.affiliation}</span>` : ''}
+                                            </p>
+                                        ` : ''}
+                                        ${item.authors ? `
+                                            <p class="text-gray-600 text-sm mt-2">
+                                                <span class="font-medium">Authors:</span> ${item.authors}
+                                            </p>
+                                        ` : ''}
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    }
                 });
 
                 html += `
@@ -529,7 +593,7 @@
                     </div>
                     <div class="bg-white rounded-lg shadow-lg p-6">
                         <div class="aspect-w-1 aspect-h-1 mb-4 overflow-hidden rounded-lg">
-                            <img src="https://res.cloudinary.com/dgr6ll2mx/image/upload/v1744006325/ernesto_ls7khv.jpg"
+                            <img src="https://res.cloudinary.com/dgr6ll2mx/image/upload_v1744006325/ernesto_ls7khv.jpg"
                                 alt="Committee Member 2" class="w-full h-full object-cover">
                         </div>
                         <h3 class="text-xl font-semibold mb-2 text-blue-800">Ernesto Luis Estevanell-Valladares</h3>
