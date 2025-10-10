@@ -89,8 +89,8 @@
                                 class="nav-link px-2 lg:px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent text-sm lg:text-base">Overview</a>
                             <a href="#description"
                                 class="nav-link px-2 lg:px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent text-sm lg:text-base">Description</a>
-                            <a href="#submissions"
-                                class="nav-link px-2 lg:px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent text-sm lg:text-base">Submissions</a>
+                            <a href="#proceedings"
+                                class="nav-link px-2 lg:px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent text-sm lg:text-base">Proceedings</a>
                             <a href="#dates"
                                 class="nav-link px-2 lg:px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 border-b-2 border-transparent text-sm lg:text-base">Dates</a>
                             <a href="#schedule"
@@ -108,8 +108,8 @@
                                 class="nav-link py-2 text-blue-200 hover:text-white transition-colors duration-200">Overview</a>
                             <a href="#description"
                                 class="nav-link py-2 text-blue-200 hover:text-white transition-colors duration-200">Description</a>
-                            <a href="#submissions"
-                                class="nav-link py-2 text-blue-200 hover:text-white transition-colors duration-200">Submissions</a>
+                            <a href="#proceedings"
+                                class="nav-link py-2 text-blue-200 hover:text-white transition-colors duration-200">Proceedings</a>
                             <a href="#dates"
                                 class="nav-link py-2 text-blue-200 hover:text-white transition-colors duration-200">Dates</a>
                             <a href="#schedule"
@@ -255,43 +255,29 @@
         </section>
 
         <!-- Submissions/Call for Papers Section -->
-        <section id="submissions" class="section-container py-20 bg-white">
+         <section id="proceedings" class="section-container py-20 bg-white">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-blue-900 mb-8">Submissions</h2>
-                <div class="bg-white rounded-lg shadow-lg p-8">
-                    <div class="prose max-w-none">
-                        <p class="text-gray-700 text-lg mb-6">
-                            We invite submissions that compare rule-based, knowledge-based, and modern neural approaches
-                            to NLP tasks. Research exploring hybrid models or evaluating LLMs against traditional
-                            methods is particularly welcome.
-                        </p>
+                <h2 class="text-3xl font-bold text-blue-900 mb-8">Proceedings</h2>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <p class="text-gray-700">Proceedings R2LM 2025 — descarga o visualiza en el navegador.</p>
+                        <a href="Proceedings-R2LM25.pdf" target="_blank" download class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">Descargar PDF</a>
+                    </div>
 
-                        <h3 class="text-xl font-semibold mb-4 text-blue-800">Submission Guidelines</h3>
-                        <p class="text-gray-700 text-lg mb-4">
-                            Submissions must follow the <a href="https://ranlp.org/ranlp2025/index.php/submissions/"
-                                target="_blank" class="text-blue-600 hover:text-blue-800 underline">RANLP 2025
-                                submission guidelines</a>, using ACL-style templates (LaTeX or MS Word).
-                        </p>
+                    <!-- iframe viewer (simple y soportado por GitHub Pages). -->
+                    <!-- Usa la ruta relativa al PDF en la raíz del repo: "Proceedings-R2LM25.pdf" -->
+                    <div class="w-full" style="min-height:60vh;">
+                        <iframe src="Proceedings-R2LM25.pdf" class="w-full" style="height:75vh; border:1px solid rgba(0,0,0,0.08);" loading="lazy"></iframe>
 
-                        <ul class="list-disc list-outside ml-6 text-gray-700 text-lg space-y-3 mb-6">
-                            <li><span class="font-medium">Long papers:</span> Up to 8 pages (excluding references)</li>
-                            <li><span class="font-medium">Short papers:</span> Up to 4 pages (excluding references)</li>
-                            <li><span class="font-medium">Publication:</span> Accepted papers will be included in the
-                                workshop proceedings which are part of the ACL Anthology.</li>
-                        </ul>
+                        <!-- Fallback por si el iframe no funciona en ciertos navegadores/móviles -->
+                        <noscript>
+                            <p class="text-gray-700 mt-4">Si no puedes ver el visor, descarga el PDF <a href="Proceedings-R2LM25.pdf" class="text-blue-600 underline">aquí</a>.</p>
+                        </noscript>
 
-                        <div class="text-center mt-8">
-                            <a href="https://softconf.com/ranlp25/R2LM2025/" target="_blank"
-                                class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300 shadow-md">
-                                <span class="flex items-center justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-                                    </svg> Submit Your Paper
-                                </span>
-                            </a>
-                        </div>
+                        <!-- object fallback para navegadores que bloqueen iframe-PDF -->
+                        <object data="Proceedings-R2LM25.pdf" type="application/pdf" class="w-full" style="height:75vh;">
+                            <p class="text-gray-700">Tu navegador no puede mostrar el PDF. Descárgalo <a href="Proceedings-R2LM25.pdf" class="text-blue-600 underline">aquí</a>.</p>
+                        </object>
                     </div>
                 </div>
             </div>
