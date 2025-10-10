@@ -254,35 +254,41 @@
             </div>
         </section>
 
-        <!-- Submissions/Call for Papers Section -->
-         <section id="proceedings" class="section-container py-20 bg-white">
+        <!-- Proceedings Section -->
+        <section id="proceedings" class="section-container py-20 bg-white">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl font-bold text-blue-900 mb-8">Proceedings</h2>
                 <div class="bg-white rounded-lg shadow-lg p-6">
                     <div class="flex items-center justify-between mb-4">
                         <p class="text-gray-700">Proceedings R2LM 2025 — descarga o visualiza en el navegador.</p>
-                        <a href="Proceedings-R2LM25.pdf" target="_blank" download class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">Descargar PDF</a>
+                        <a href="Proceedings-R2LM25.pdf" target="_blank" download
+                            class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">Descargar
+                            PDF</a>
                     </div>
 
                     <!-- iframe viewer (simple y soportado por GitHub Pages). -->
                     <!-- Usa la ruta relativa al PDF en la raíz del repo: "Proceedings-R2LM25.pdf" -->
                     <div class="w-full" style="min-height:60vh;">
-                        <iframe src="Proceedings-R2LM25.pdf" class="w-full" style="height:75vh; border:1px solid rgba(0,0,0,0.08);" loading="lazy"></iframe>
+                        <iframe src="Proceedings-R2LM25.pdf" class="w-full"
+                            style="height:75vh; border:1px solid rgba(0,0,0,0.08);" loading="lazy"></iframe>
 
-                        <!-- Fallback por si el iframe no funciona en ciertos navegadores/móviles -->
+                        <!-- Fallback solo para usuarios sin JavaScript -->
                         <noscript>
-                            <p class="text-gray-700 mt-4">Si no puedes ver el visor, descarga el PDF <a href="Proceedings-R2LM25.pdf" class="text-blue-600 underline">aquí</a>.</p>
+                            <div class="mt-4">
+                                <p class="text-gray-700">Si no puedes ver el visor, descarga el PDF <a
+                                        href="Proceedings-R2LM25.pdf" class="text-blue-600 underline">aquí</a>.</p>
+                                <!-- object dentro de noscript: solo se mostrará cuando JS esté deshabilitado -->
+                                <object data="Proceedings-R2LM25.pdf" type="application/pdf" class="w-full"
+                                    style="height:75vh;">
+                                    <p class="text-gray-700">Tu navegador no puede mostrar el PDF. Descárgalo <a
+                                            href="Proceedings-R2LM25.pdf" class="text-blue-600 underline">aquí</a>.</p>
+                                </object>
+                            </div>
                         </noscript>
-
-                        <!-- object fallback para navegadores que bloqueen iframe-PDF -->
-                        <object data="Proceedings-R2LM25.pdf" type="application/pdf" class="w-full" style="height:75vh;">
-                            <p class="text-gray-700">Tu navegador no puede mostrar el PDF. Descárgalo <a href="Proceedings-R2LM25.pdf" class="text-blue-600 underline">aquí</a>.</p>
-                        </object>
                     </div>
                 </div>
             </div>
         </section>
-
         <!-- Dates Section -->
         <section id="dates" class="section-container py-20 bg-gray-50">
             <div class="container mx-auto px-4">
